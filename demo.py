@@ -25,7 +25,7 @@ from data import WIDERFace_CLASSES as labelmap
 from data import (WIDERFace_ROOT, WIDERFaceAnnotationTransform,
                   WIDERFaceDetection)
 from face_ssd import build_ssd
-from widerface_val import bbox_vote
+#from widerface_val import bbox_vote
 
 plt.switch_backend('agg')
 
@@ -38,7 +38,7 @@ parser.add_argument('--visual_threshold', default=0.1, type=float,
                     help='Final confidence threshold')
 parser.add_argument('--cuda', default=True, type=bool,
                     help='Use cuda to train model')
-parser.add_argument('--img_root', default='./data/worlds-largest-selfie.jpg', help='Location of test images directory')
+parser.add_argument('--img_root', default='../test_origin.jpg', help='Location of test images directory')
 parser.add_argument('--widerface_root', default=WIDERFace_ROOT, help='Location of WIDERFACE root directory')
 args = parser.parse_args()
 
